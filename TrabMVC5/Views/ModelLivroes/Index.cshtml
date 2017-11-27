@@ -1,0 +1,64 @@
+﻿@model IEnumerable<TMVC5.Models.ModelLivro>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Inserir Novo", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.autor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.descri)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.editora)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.genero)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.livro)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.qtd)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.autor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.descri)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.editora)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.genero)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.livro)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.qtd)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.idLivro }) |
+            @Html.ActionLink("Detalhes", "Details", new { id=item.idLivro }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.idLivro })
+        </td>
+    </tr>
+}
+
+</table>

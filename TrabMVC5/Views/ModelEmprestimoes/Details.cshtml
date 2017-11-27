@@ -1,0 +1,59 @@
+﻿@model TMVC5.Models.ModelEmprestimo
+
+@{
+    ViewBag.Title = "Detalhes";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detalhes</h2>
+
+<div>
+    <h4>Detalhes do Empréstimo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.RA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.livro_id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.livro_id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.qtd)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.qtd)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.data_emp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.data_emp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.data_devol)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.data_devol)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.idEmprestimo }) |
+    @Html.ActionLink("Voltar", "Index")
+</p>

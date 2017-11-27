@@ -1,0 +1,73 @@
+﻿@model TMVC5.Models.ModelLivro
+
+@{
+    ViewBag.Title = "Excluir";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Excluir</h2>
+
+<h3>Tem certeza que deseja excluir este livro?</h3>
+<div>
+    <h4>Exclusão de Livros</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.autor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.autor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.descri)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descri)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.editora)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.editora)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.genero)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.genero)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.livro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.livro)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.qtd)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.qtd)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Confirmar" class="btn btn-default" /> |
+            @Html.ActionLink("Voltar", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,58 @@
+﻿@model IEnumerable<TMVC5.Models.ModelEmprestimo>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Reserva de Livro</h2>
+
+<p>
+    @Html.ActionLink("Nova Reserva", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.RA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.livro_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.qtd)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.data_emp)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.data_devol)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.RA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.livro_id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.qtd)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.data_emp)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.data_devol)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.idEmprestimo }) |
+            @Html.ActionLink("Detalhes", "Details", new { id=item.idEmprestimo }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.idEmprestimo })
+        </td>
+    </tr>
+}
+
+</table>

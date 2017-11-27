@@ -1,0 +1,67 @@
+﻿@model TMVC5.Models.ModelLivro
+
+@{
+    ViewBag.Title = "Detalhes";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detalhes</h2>
+
+<div>
+    <h4>Dados do Livro</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.autor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.autor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.descri)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descri)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.editora)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.editora)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.genero)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.genero)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.livro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.livro)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.qtd)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.qtd)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.idLivro }) |
+    @Html.ActionLink("Voltar", "Index")
+</p>
